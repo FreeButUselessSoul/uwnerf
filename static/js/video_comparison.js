@@ -5,7 +5,7 @@
 function playVids(videoId) {
     var videoMerge = document.getElementById(videoId + "Merge");
     var vid = document.getElementById(videoId);
-
+    var vid2 = document.getElementById(videoId + "1");
     var position = 0.5;
     var vidWidth = vid.videoWidth/2;
     var vidHeight = vid.videoHeight;
@@ -15,7 +15,7 @@ function playVids(videoId) {
     
     if (vid.readyState > 3) {
         vid.play();
-
+        vid2.play();
         function trackLocation(e) {
             // Normalize to [0, 1]
             bcr = videoMerge.getBoundingClientRect();
@@ -36,7 +36,7 @@ function playVids(videoId) {
             mergeContext.drawImage(vid, 0, 0, vidWidth, vidHeight, 0, 0, vidWidth, vidHeight);
             var colStart = (vidWidth * position).clamp(0.0, vidWidth);
             var colWidth = (vidWidth - (vidWidth * position)).clamp(0.0, vidWidth);
-            mergeContext.drawImage(vid, colStart+vidWidth, 0, colWidth, vidHeight, colStart, 0, colWidth, vidHeight);
+            mergeContext.drawImage(vid2, colStart+vidWidth, 0, colWidth, vidHeight, colStart, 0, colWidth, vidHeight);
             requestAnimationFrame(drawLoop);
 
             

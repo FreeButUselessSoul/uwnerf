@@ -185,40 +185,53 @@
   </div>
 </section> -->
 
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <h2 class="title is-3">Underwater Video Rendering</h2>
+      <div class="row">
+        <div class="col-md-8 col-md-offset-2">
 
+            <div class="video-compare-container" id="compositeDiv">
+                <video class="video" id="composite" loop playsinline autoPlay muted src="./assets/ours.mp4" onplay="resizeAndPlay(this)"></video>
+                <video class="video" id="composite1" loop playsinline autoPlay muted src="./assets/dynamicnerf.mp4" onplay="resizeAndPlay(this)"></video>
+                <canvas height=0 class="videoMerge" id="compositeMerge"></canvas>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
-<!-- <section class="section">
+<section class="section">
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Our everyday lives are filled with occlusions that we 
-            strive to see through. By aggregating desired background
-            information from different viewpoints, we can easily eliminate
-            such occlusions without any external occlusion-free
-            supervision. Though several occlusion removal methods
-            have been proposed to empower machine vision systems
-            with such ability, their performances are still unsatisfactory
-            due to reliance on external supervision. We propose a
-            novel method, OCC-NeRF, for occlusion removal by adequately considering
-            the benefits of multiple viewing angles, which directly
-            builds a mapping between viewing angles and their corresponding
-            scene details leveraging Neural Radiance Fields
-            (NeRF). We also develop an effective scheme to jointly optimize
-            camera parameters and scene reconstruction when
-            occlusions are present. An additional depth constraint is
-            applied to supervise the entire optimization without labeled
-            external data for training. Our experimental results on existing
-            and newly collected datasets validate the effectiveness
-            of our method.
+            Among the numerous efforts towards digitally recovering the physical world, Neural Radiance Fields (NeRFs) have proved effective in most cases. However, underwater scene introduces unique challenges due to the absorbing water medium, the local change in lighting and the dynamic contents in the scene. We aim at developing a neural underwater scene representation for these challenges, modeling the complex process of attenuation, unstable in-scattering and moving objects during light transport. The proposed method can reconstruct the scenes from both established datasets and in-the-wild videos with outstanding fidelity.
           </p>
         </div>
       </div>
-    </div> -->
+    </div>
     <!--/ Abstract. -->
 
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Method Pipeline</h2>
+        <div class="content has-text-justified">
+          <figure class="image">
+            <img src="static/images/pipeline.png" alt="Method Pipeline">
+          </figure>
+        </div>
+      </div>
+    </div>
+      
+      
     <!-- Paper video. -->
     <!-- <div class="column is-centered has-text-centered">
       <h2 class="title is-3">Animated Comparison</h2>
@@ -272,66 +285,88 @@
     <!--/ Paper video. -->
 
     <!--/ Dataset Demo.-->
-    <!-- <div class="columns is-centered has-text-centered">
+    <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
         <h2 class="title is-3">Dataset</h2>
-
-        <div id="dataset-carousel" class="carousel results-carousel">
-          <div class="item item-steve">
-            <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
-              <source src="https://homes.cs.washington.edu/~kpar/nerfies/videos/steve.mp4"
-                      type="video/mp4">
-            </video>
+        <div class="columns is-multiline">
+          <div class="column is-one-quarter">
+            <figure class="image">
+              <img src="static/images/1.png" alt="Image 1">
+            </figure>
+            <p class="caption">Curacao</p>
           </div>
-          <div class="item item-chair-tp">
-            <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
-              <source src="https://homes.cs.washington.edu/~kpar/nerfies/videos/chair-tp.mp4"
-                      type="video/mp4">
-            </video>
+          <div class="column is-one-quarter">
+            <figure class="image">
+              <img src="static/images/2.png" alt="Image 2">
+            </figure>
+            <p class="caption">Redsea</p>
           </div>
-          <div class="item item-shiba">
-            <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
-              <source src="https://homes.cs.washington.edu/~kpar/nerfies/videos/shiba.mp4"
-                      type="video/mp4">
-            </video>
+          <div class="column is-one-quarter">
+            <figure class="image">
+              <img src="static/images/3.png" alt="Image 3">
+            </figure>
+            <p class="caption">Japanese</p>
           </div>
-          <div class="item item-fullbody">
-            <video poster="" id="fullbody" autoplay controls muted loop playsinline height="100%">
-              <source src="https://homes.cs.washington.edu/~kpar/nerfies/videos/fullbody.mp4"
-                      type="video/mp4">
-            </video>
+          <div class="column is-one-quarter">
+            <figure class="image">
+              <img src="static/images/4.png" alt="Image 4">
+            </figure>
+            <p class="caption">Panama</p>
           </div>
-          <div class="item item-blueshirt">
-            <video poster="" id="blueshirt" autoplay controls muted loop playsinline height="100%">
-              <source src="https://homes.cs.washington.edu/~kpar/nerfies/videos/blueshirt.mp4"
-                      type="video/mp4">
-            </video>
+          <div class="column is-one-quarter">
+            <figure class="image">
+              <img src="static/images/5.png" alt="Image 5">
+            </figure>
+            <p class="caption">Coral</p>
           </div>
-          <div class="item item-mask">
-            <video poster="" id="mask" autoplay controls muted loop playsinline height="100%">
-              <source src="https://homes.cs.washington.edu/~kpar/nerfies/videos/mask.mp4"
-                      type="video/mp4">
-            </video>
+          <div class="column is-one-quarter">
+            <figure class="image">
+              <img src="static/images/6.png" alt="Image 6">
+            </figure>
+            <p class="caption">Composite</p>
           </div>
-          <div class="item item-coffee">
-            <video poster="" id="coffee" autoplay controls muted loop playsinline height="100%">
-              <source src="https://homes.cs.washington.edu/~kpar/nerfies/videos/coffee.mp4"
-                      type="video/mp4">
-            </video>
+          <div class="column is-one-quarter">
+            <figure class="image">
+              <img src="static/images/7.png" alt="Image 7">
+            </figure>
+            <p class="caption">Sardine</p>
           </div>
-          <div class="item item-toby">
-            <video poster="" id="toby" autoplay controls muted loop playsinline height="100%">
-              <source src="https://homes.cs.washington.edu/~kpar/nerfies/videos/toby2.mp4"
-                      type="video/mp4">
-            </video>
+          <div class="column is-one-quarter">
+            <figure class="image">
+              <img src="static/images/8.png" alt="Image 8">
+            </figure>
+            <p class="caption">Turtle</p>
           </div>
         </div>
-
       </div>
-    </div> -->
-    <!--/ Dataset Demo.-->
-  </div>
-</section>
+    </div>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Underwater Restoration</h2>
+        <div class="content has-text-justified">
+        </div>
+      </div>
+    </div>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Additional Results</h2>
+        <div class="content has-text-justified">
+        </div>
+      </div>
+    </div>
+
+
+  </section>
+
+
+
 
 
 <!-- <section class="section">
