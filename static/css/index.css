@@ -89,6 +89,10 @@ body {
   /*color: #4286f4;*/
 }
 
+.image-scale {
+  transform: scale(1.5);
+}
+
 .video-container {
   position: relative;
   width: 100%;
