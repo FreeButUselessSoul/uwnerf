@@ -189,18 +189,25 @@
   <div class="container is-max-desktop">
     <div class="hero-body">
       <h2 class="title is-3">Underwater Video Rendering</h2>
-      <div class="row">
-        <div class="col-md-8 col-md-offset-2">
-
-            <div class="video-compare-container" id="compositeDiv">
-                <video class="video" id="composite" loop playsinline autoPlay muted src="./assets/ours.mp4" onplay="resizeAndPlay(this)"></video>
-                <video class="video" id="composite1" loop playsinline autoPlay muted src="./assets/dynamicnerf.mp4" onplay="resizeAndPlay(this)"></video>
-                <canvas height=0 class="videoMerge" id="compositeMerge"></canvas>
-            </div>
+      <figure class="video-container">
+        <video id="composite" loop playsinline autoplay muted>
+          <source src="./assets/ours.mp4" type="video/mp4">
+          <p>Your browser does not support the video element.</p>
+        </video>
+        <!-- Uncomment the following lines if you need a video comparison feature -->
+        <!--
+        <div class="video-compare">
+          <video id="composite1" loop playsinline autoplay muted>
+            <source src="./assets/dynamicnerf.mp4" type="video/mp4">
+            <p>Your browser does not support the video element.</p>
+          </video>
+          <canvas id="compositeMerge" class="video-merge"></canvas>
         </div>
-      </div>
+        -->
+      </figure>
     </div>
   </div>
+</section>
 
 <section class="section">
   <div class="container is-max-desktop">
