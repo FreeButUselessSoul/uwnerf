@@ -185,26 +185,31 @@
   </div>
 </section> -->
 
+
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
-      <h2 class="title is-3">Underwater Video Rendering</h2>
-      <figure class="video-container">
-        <video id="composite" loop playsinline autoplay muted>
-          <source src="./assets/ours.mp4" type="video/mp4">
-          <p>Your browser does not support the video element.</p>
-        </video>
-        <!-- Uncomment the following lines if you need a video comparison feature -->
-        <!--
-        <div class="video-compare">
-          <video id="composite1" loop playsinline autoplay muted>
-            <source src="./assets/dynamicnerf.mp4" type="video/mp4">
-            <p>Your browser does not support the video element.</p>
-          </video>
-          <canvas id="compositeMerge" class="video-merge"></canvas>
+      <h2 class="title is-3 has-text-centered">Underwater Video Rendering</h2>
+      <div class="video-container">
+        <div class="column">
+          <figure>
+            <video id="composite" loop playsinline autoplay muted>
+              <source src="./assets/ours.mp4" type="video/mp4">
+              <p>Your browser does not support the video element.</p>
+            </video>
+            <figcaption>Ours</figcaption>
+          </figure>
         </div>
-        -->
-      </figure>
+        <div class="column">
+          <figure>
+            <video id="composite1" loop playsinline autoplay muted>
+              <source src="./assets/dynamicnerf.mp4" type="video/mp4">
+              <p>Your browser does not support the video element.</p>
+            </video>
+            <figcaption>DynamicNeRF</figcaption>
+          </figure>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -222,11 +227,10 @@
       </div>
     </div>
     <!--/ Abstract. -->
-
+  </section>
 
 
 <section class="section">
-  <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
         <h2 class="title is-3">Method Pipeline</h2>
@@ -237,61 +241,11 @@
         </div>
       </div>
     </div>
-      
-      
-    <!-- Paper video. -->
-    <!-- <div class="column is-centered has-text-centered">
-      <h2 class="title is-3">Animated Comparison</h2>
-    </div>
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <section class="hero is-light is-small">
-          <div class="hero-body">
-            <div class="container">
-              <div id="results-carousel" class="carousel results-carousel">
-                <div class="item item-fence1">
-                  <video poster="" id="fence1" autoplay controls muted loop playsinline height="100%">
-                    <source src="assets/comparison_fence1.mp4"
-                            type="video/mp4">
-                  </video>
-                </div>
-                <div class="item item-scribble3">
-                  <video poster="" id="scribble3" autoplay controls muted loop playsinline height="100%">
-                    <source src="assets/comparison_scribble3.mp4"
-                            type="video/mp4">
-                  </video>
-                </div>
-                <div class="item item-wire1">
-                  <video poster="" id="wire1" autoplay controls muted loop playsinline height="100%">
-                    <source src="assets/comparison_wire1.mp4"
-                            type="video/mp4">
-                  </video>
-                </div>
-                <div class="item item-statue">
-                  <video poster="" id="statue" autoplay controls muted loop playsinline height="100%">
-                    <source src="assets/comparison_statue.mp4"
-                            type="video/mp4">
-                  </video>
-                </div>
-                <div class="item item-scribble2">
-                  <video poster="" id="scribble2" autoplay controls muted loop playsinline height="100%">
-                    <source src="assets/comparison_scribble2.mp4"
-                            type="video/mp4">
-                  </video>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-        <div class="publication-video">
-          <iframe src="https://drive.google.com/file/d/1_ASFtK5Dbi4Qr9gODdMI6WyaY34lmr9z/preview"
-                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-        </div>
-      </div>
-    </div> -->
-    <!--/ Paper video. -->
+  </section>
 
     <!--/ Dataset Demo.-->
+<section class="section">
+  <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
         <h2 class="title is-3">Dataset</h2>
@@ -347,19 +301,41 @@
         </div>
       </div>
     </div>
+  </div>
+</section>
 
 <section class="section">
-  <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
+      <div class="column is-two-fifths">
         <h2 class="title is-3">Underwater Restoration</h2>
-        <div class="content has-text-justified">
-        </div>
-      </div>
+          <div class="columns is-multiline">
+            <div class="column is-half">
+              <figure class="image">
+                <img src="static/images/9.jpg" alt="Image 9">
+              </figure>
+            </div>
+            <div class="column is-half">
+              <figure class="image">
+                <img src="static/images/10.jpg" alt="Image 10">
+              </figure>
+            </div>
+            <div class="column is-half">
+              <figure class="image">
+                <img src="static/images/11.jpg" alt="Image 11">
+              </figure>
+            </div>
+            <div class="column is-half">
+              <figure class="image">
+                <img src="static/images/12.jpg" alt="Image 12">
+              </figure>
+            </div>
+          </div>
     </div>
+  </div>
+</section>
 
 
-<section class="section">
+<!-- <section class="section">
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
@@ -368,6 +344,7 @@
         </div>
       </div>
     </div>
+  </section> -->
 
 
   </section>
