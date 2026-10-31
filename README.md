@@ -1,14 +1,18 @@
-# OCC-NeRF
+# Neural Underwater Scene Representation
 
-This is the repository that contains source code for the project page of [OCC-NeRF](https://freebutuselesssoul.github.io/occnerf/).
+This repository contains the source code for the [project page](https://freebutuselesssoul.github.io/uwnerf/) of **Neural Underwater Scene Representation**, presented at **CVPR 2024**.
 
-If you find OCC-NeRF useful for your work please cite:
-```
-@inproceedings{zhu2023occlusion,
-  author    = {Chengxuan Zhu and Renjie Wan and Yunkai Tang and Boxin Shi},
-  title     = {Occlusion-Free Scene Recovery via Neural Radiance Fields},
-  journal   = {CVPR},
-  year      = {2023},
+[Paper](https://openaccess.thecvf.com/content/CVPR2024/html/Tang_Neural_Underwater_Scene_Representation_CVPR_2024_paper.html)
+
+If you find this work useful for your research, please cite:
+
+```bibtex
+@inproceedings{tang2024uwnerf,
+  author    = {Yunkai Tang and Chengxuan Zhu and Renjie Wan and Chao Xu and Boxin Shi},
+  title     = {Neural Underwater Scene Representation},
+  booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+  pages     = {11780--11789},
+  year      = {2024},
 }
 ```
 
